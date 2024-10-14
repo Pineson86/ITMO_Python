@@ -1,0 +1,11 @@
+Johnes
+phone: +7 953441 35 58
+email: example@mail.com
+
+Smith
+phone: 89213367785
+email: test@list.org
+
+ITMO
+phone: (812)-411-11-22
+email: itmo@itmo.ru
