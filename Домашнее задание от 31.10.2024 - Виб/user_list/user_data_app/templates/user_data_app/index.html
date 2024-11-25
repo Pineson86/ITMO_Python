@@ -1,0 +1,31 @@
+<!-- my_app/templates/my_app/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User list</title>
+</head>
+<body>
+    <h1>Enter Your Details</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Users List</h2>
+    <ul>
+        {% for user in users %}
+            <li>
+                {{ user.name }} - {{ user.email }}
+                <a href="{% url 'delete_user' user.id %}">Delete</a>
+            </li>
+        {% empty %}
+            <p>No users found.</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
