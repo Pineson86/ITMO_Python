@@ -1,6 +1,6 @@
-a = 3
-b = 24
-c = 2
+a = int(input('write first integer and press Enter: '))
+b = int(input('write second integer and press Enter: '))
+c = int(input('write third integer and press Enter: '))
 
 #solving quadratic equation without any addition libraries
 
